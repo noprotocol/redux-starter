@@ -38,7 +38,9 @@
     "expect": "^1.12.1"
   },
   "scripts": {
-    "start": "node server.js"
+    "start": "NODE_ENV=development node src/server/index.js --progress --colors --profile",
+    "start-prod": "NODE_ENV=production node src/server/index.js --progress --colors --profile",
+    "build": "npm run clean && NODE_ENV=production webpack -p --progress --colors --profile"
   },
   "repository": {
     "type": "git",
