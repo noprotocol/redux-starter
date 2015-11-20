@@ -42,6 +42,8 @@ const middlewareBuilder = () => {
   return allComposeElements;
 
 }
+
+// TODO: Obviously this could be done better ..
 let finalCreateStore;
 if(process.browser) {
   finalCreateStore = compose(...middlewareBuilder(),   window.devToolsExtension ? window.devToolsExtension() : f => f)(createStore);
