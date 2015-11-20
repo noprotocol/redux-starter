@@ -20,7 +20,7 @@ const middlewareBuilder = () => {
         middleware,
         reduxReactRouter({
           createHistory
-        })
+        }),
       ]
     }else{
       middleware = applyMiddleware(...universalMiddleware,createLogger());
@@ -43,7 +43,13 @@ const middlewareBuilder = () => {
 
 }
 
-const finalCreateStore = compose(...middlewareBuilder())(createStore);
+// TODO: Obviously this could be done better ..
+let finalCreateStore;
+if(process.browser) {
+  finalCreateStore = compose(...middlewareBuilder(),   window.devToolsExtension ? window.devToolsExtension() : f => f)(createStore);
+} else {
+  finalCreateStore = compose(...middlewareBuilder())(createStore);
+}
 
 export default function configureStore(initialState) {
   const store = finalCreateStore(rootReducer, initialState);
