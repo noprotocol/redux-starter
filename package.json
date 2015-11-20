@@ -1,0 +1,21 @@
+{
+  "name": "redux-starter",
+  "version": "0.0.1",
+  "description": "Most Redux boilerplates contain bloat or 'magic'. The goal of this repo is to be transparent and minimalistic whilst giving a starting point for a Redux App",
+  "main": "index.js",
+  "dependencies": {
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/noprotocol/redux-starter.git"
+  },
+  "author": "Stef van den Ham (stef@mindthecode.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/noprotocol/redux-starter/issues"
+  },
+  "homepage": "https://github.com/noprotocol/redux-starter#readme"
+}
