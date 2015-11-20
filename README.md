@@ -1,16 +1,19 @@
 # Redux Starter
-Most Redux boilerplates contain bloat or 'magic'. The goal of this repo is to be transparent and minimalistic whilst giving a starting point for a Redux App
+A boilerplate starter app to kickstart your next front-end project
 
-## What should it contain
+# Features
+- React
+- Redux
+- Webpack build tool
+- Hot Replacement Module for components and reducers
+- Redux Dev Tools
+- React Router
+- Universal Rendering
+- Redux Logger
 
-- [ ] react 0.14
-- [ ] redux
-- [ ] react-router
-- [ ] redux DevTools
-- [ ] webpack buildtool
-- [ ] sass support
-- [ ] folder structure that makes sense
-- [ ] universal rendering ((very) nice to have)
-- [ ] redux logger
-- [ ] ability to communicate to external api based on config
-- [ ] config for dev/staging/prod
+## To Do
+
+- SASS support
+- Folder layout
+- API proxy (based on config?)
+
