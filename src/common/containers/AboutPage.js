@@ -3,28 +3,17 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
 import About from '../components/About';
-
-class App extends Component {
-
-  constructor(props){
-    super(props);
-  }
-
-  render() {
-    return (
-      <About />
-    );
-  }
-}
+import * as CounterActions from '../actions/counter';
 
 function mapStateToProps(state) {
   return {
+    counter: state.counter.present
   };
 }
 
 function mapDispatchToProps(dispatch) {
-  return {};
+  return bindActionCreators(CounterActions, dispatch);
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default connect(mapStateToProps, mapDispatchToProps)(About);
 

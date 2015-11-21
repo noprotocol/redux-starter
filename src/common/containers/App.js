@@ -4,12 +4,14 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router';
 import classNames from 'classnames';
 
-import Home from '../components/Home';
+import * as LayoutActions from '../actions/layout';
+
 import Header from '../components/Header';
+import Home from '../components/Home';
 
 class App extends Component {
 
-  constructor(props){
+  constructor(props) {
     super(props);
  }
 
@@ -26,12 +28,12 @@ class App extends Component {
 
 function mapStateToProps(state) {
   return {
+    counter: state.counter.present
   };
 }
 
 function mapDispatchToProps(dispatch) {
-  // return bindActionCreators(LayoutActions,dispatch);
-  return {};
+  return bindActionCreators(LayoutActions,dispatch);
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);
