@@ -2,11 +2,15 @@ import React, { Component } from 'react';
 
 class About extends Component {
 
-  render() {
+   render() {
+console.log(this.props);
+    const { incrementCounter, decrementCounter, counter } = this.props;
     return (
-      <div className="posts">
+      <div>
         <h1>About</h1>
-        <p>Summary of features?</p>
+        Counter: {counter}<br />
+        <button onClick={incrementCounter}>+</button>
+        <button onClick={decrementCounter}>-</button>
       </div>
     );
   }

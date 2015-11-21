@@ -12,7 +12,7 @@ const middlewareBuilder = () => {
   let middleware = {};
   let universalMiddleware = [thunk,promiseMiddleware];
   let allComposeElements = [];
-  
+
   if(process.browser){
     if(process.env.NODE_ENV === 'production' || process.env.NODE_ENV === 'test'){
       middleware = applyMiddleware(...universalMiddleware);
@@ -46,7 +46,8 @@ const middlewareBuilder = () => {
 // TODO: Obviously this could be done better ..
 let finalCreateStore;
 if(process.browser) {
-  finalCreateStore = compose(...middlewareBuilder(),   window.devToolsExtension ? window.devToolsExtension() : f => f)(createStore);
+  finalCreateStore = compose(...middlewareBuilder())(createStore);
+  // finalCreateStore = compose(...middlewareBuilder(),   window.devToolsExtension ? window.devToolsExtension() : f => f)(createStore);
 } else {
   finalCreateStore = compose(...middlewareBuilder())(createStore);
 }

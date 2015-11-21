@@ -3,7 +3,7 @@ import { routerStateReducer } from 'redux-router';
 import undoable from 'redux-undo';
 
 // import user from './user';
-// import counter from './counter';
+import counter from './counter';
 // import layout from './layout';
 // import todos from './todos';
 // import version from './version';
@@ -11,6 +11,7 @@ import undoable from 'redux-undo';
 
 const rootReducer = combineReducers({
   version: '0.0.0',
+  counter: undoable(counter),
   router : routerStateReducer
 });
 
