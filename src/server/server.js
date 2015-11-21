@@ -12,7 +12,6 @@ import createLocation from 'history/lib/createLocation';
 import { fetchComponentDataBeforeRender } from '../common/api/fetchComponentDataBeforeRender';
 
 import configureStore from '../common/store/configureStore';
-import { getUser } from '../common/api/user';
 import routes from '../common/routes';
 import packagejson from '../../package.json';
 
@@ -49,47 +48,39 @@ app.get('/*', function (req, res) {
 
   const location = createLocation(req.url);
 
-  getUser(user => {
+    match({ routes, location }, (err, redirectLocation, renderProps) => {
 
-      if(!user) {
-        return res.status(401).end('Not Authorised');
+      if(err) {
+        console.error(err);
+        return res.status(500).end('Internal server error');
       }
 
-      match({ routes, location }, (err, redirectLocation, renderProps) => {
+      if(!renderProps)
+        return res.status(404).end('Not found');
 
-        if(err) {
-          console.error(err);
-          return res.status(500).end('Internal server error');
-        }
+      // const store = configureStore({user : user, version : packagejson.version});
+      const store = configureStore({version : packagejson.version});
 
-        if(!renderProps)
-          return res.status(404).end('Not found');
+      const InitialView = (
+        <Provider store={store}>
+          {() =>
+            <RoutingContext {...renderProps} />
+          }
+        </Provider>
+      );
 
-        const store = configureStore({user : user, version : packagejson.version});
-
-        const InitialView = (
-          <Provider store={store}>
-            {() =>
-              <RoutingContext {...renderProps} />
-            }
-          </Provider>
-        );
-
-        //This method waits for all render component promises to resolve before returning to browser
-        fetchComponentDataBeforeRender(store.dispatch, renderProps.components, renderProps.params)
-          .then(html => {
-            const componentHTML = React.renderToString(InitialView);
-            const initialState = store.getState();
-            res.status(200).end(renderFullPage(componentHTML,initialState))
-          })
-          .catch(err => {
-            console.log(err)
-            res.end(renderFullPage("",{}))
-          });
-      });
-
-    }
-  )
+      //This method waits for all render component promises to resolve before returning to browser
+      fetchComponentDataBeforeRender(store.dispatch, renderProps.components, renderProps.params)
+        .then(html => {
+          const componentHTML = React.renderToString(InitialView);
+          const initialState = store.getState();
+          res.status(200).end(renderFullPage(componentHTML,initialState))
+        })
+        .catch(err => {
+          console.log(err)
+          res.end(renderFullPage("",{}))
+        });
+    });
 
 });
 
