@@ -1,6 +1,10 @@
 # Redux Starter
 A boilerplate starter app to kickstart your next front-end project
 
+# Setup
+Homepage with counter sample
+Menu to about page (routing) with async data
+
 # Features
 - [x] React
 - [x]  Redux
@@ -17,4 +21,6 @@ A boilerplate starter app to kickstart your next front-end project
 - [ ] SASS support
 - [ ] Folder layout
 - [ ] API proxy (based on config?)
-
+- [ ] Meta data injection
+- [ ] Add example of API use and Counter to page
+- [ ] Push to git remote add origin git@github.com:Hyra/Antler.git
