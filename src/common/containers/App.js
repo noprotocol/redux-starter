@@ -7,7 +7,7 @@ import classNames from 'classnames';
 import * as LayoutActions from '../actions/layout';
 
 import Header from '../components/Header';
-import Home from '../components/Home';
+import HomePage from '../containers/HomePage';
 
 class App extends Component {
 
@@ -19,7 +19,7 @@ class App extends Component {
    return (
       <div>
         <Header />
-        {!this.props.children && <Home />}
+        {!this.props.children && <HomePage />}
         {this.props.children}
       </div>
     );
@@ -28,7 +28,6 @@ class App extends Component {
 
 function mapStateToProps(state) {
   return {
-    counter: state.counter.present
   };
 }
 
