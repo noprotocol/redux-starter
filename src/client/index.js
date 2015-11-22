@@ -30,5 +30,5 @@ React.render(
 
 // TODO: Have this as an option in npm scripts?
 if (process.env.NODE_ENV !== 'production') {
-  // require('../server/devtools')(store);
+  require('../server/devtools')(store);
 }
