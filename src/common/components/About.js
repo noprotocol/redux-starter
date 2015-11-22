@@ -4,12 +4,11 @@ class About extends Component {
 
   render() {
     return (
-      <div className="posts">
+      <div>
         <h1>About</h1>
-        <p>Summary of features?</p>
       </div>
     );
   }
-}
+};
 
 export default About;
