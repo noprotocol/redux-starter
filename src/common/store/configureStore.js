@@ -22,8 +22,8 @@ const middlewareBuilder = () => {
           createHistory
         }),
       ]
-    }else{
-      middleware = applyMiddleware(...universalMiddleware,createLogger());
+    } else {
+      middleware = applyMiddleware(...universalMiddleware,createLogger({collapsed: true}));
       allComposeElements = [
         middleware,
         reduxReactRouter({
