@@ -6,11 +6,11 @@ import undoable from 'redux-undo';
 import counter from './counter';
 // import layout from './layout';
 // import todos from './todos';
-// import version from './version';
+import version from './version';
 // import { selectedReddit, postsByReddit } from './reddit';
 
 const rootReducer = combineReducers({
-  version: '0.0.0',
+  version: version,
   counter: undoable(counter),
   router : routerStateReducer
 });
