@@ -1,5 +1,10 @@
 import React from 'react';
-import { DevTools, DebugPanel, LogMonitor } from 'redux-devtools/lib/react';
+
+// import { DevTools, DebugPanel, LogMonitor } from 'redux-devtools/lib/react';
+import { createDevTools } from 'redux-devtools';
+import LogMonitor from 'redux-devtools-log-monitor';
+import DockMonitor from 'redux-devtools-dock-monitor';
+
 import ReactDOM from 'react-dom';
 
 /*
@@ -31,9 +36,15 @@ export default function createDevToolsWindow(store) {
 
   // Wait a little bit for it to reload, then render.
   setTimeout(() => ReactDOM.render(
-    <DebugPanel top right bottom left>
-      <DevTools store={store} monitor={LogMonitor} />
-    </DebugPanel>,
+    createDevTools(
+      <DockMonitor toggleVisibilityKey='H'
+                   changePositionKey='Q'>
+        <LogMonitor />
+      </DockMonitor>
+    ),
+    // <DebugPanel top right bottom left>
+    //   <DevTools store={store} monitor={LogMonitor} />
+    // </DebugPanel>,
     win.document.body.appendChild(document.createElement('div'))
   ), 10);
 }

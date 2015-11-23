@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router';
 import classNames from 'classnames';
 
+import DevTools from '../../server/devtools_v3';
 import * as LayoutActions from '../actions/layout';
 
 import Header from '../components/Header';
@@ -21,6 +22,7 @@ class App extends Component {
         <Header />
         {!this.props.children && <HomePage />}
         {this.props.children}
+        <DevTools />
       </div>
     );
   }

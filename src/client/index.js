@@ -20,14 +20,15 @@ const rootElement = document.getElementById('root');
 
 ReactDOM.render(
   <Provider store={store}>
-        <ReduxRouter>
-          <Router children={routes} history={history} />
-        </ReduxRouter>
+    <ReduxRouter>
+      <Router children={routes} history={history} />
+    </ReduxRouter>
   </Provider>,
   document.getElementById('root')
 );
 
 // TODO: Have this as an option in npm scripts?
-if (process.env.NODE_ENV !== 'production') {
-  require('../server/devtools')(store);
-}
+// TODO: This broke with devtools v3, salvage or bin?
+// if (process.env.NODE_ENV !== 'production') {
+  // require('../server/devtools')(store);
+// }

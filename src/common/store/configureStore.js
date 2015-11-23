@@ -1,5 +1,6 @@
 import { createStore, applyMiddleware, compose } from 'redux';
-import { devTools, persistState } from 'redux-devtools';
+import DevTools from '../../server/devtools_v3';
+import { persistState } from 'redux-devtools';
 import { reduxReactRouter } from 'redux-router';
 import thunk from 'redux-thunk';
 import createHistory from 'history/lib/createBrowserHistory';
@@ -29,8 +30,12 @@ const middlewareBuilder = () => {
         reduxReactRouter({
           createHistory
         }),
-        devTools(),
-        // persistState(window.location.href.match(/[?&]debug_session=([^&]+)\b/))
+        DevTools.instrument(),
+        persistState(
+          window.location.href.match(
+            /[?&]debug_session=([^&]+)\b/
+          )
+        ),
       ]
     }
   } else {
