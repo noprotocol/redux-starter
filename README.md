@@ -14,13 +14,12 @@ Menu to about page (routing) with async data
 - [x] React Router
 - [x] Universal Rendering
 - [x] Redux Logger
+- [x] Clean up
+- [x] SASS support
 
 ## To Do
 
-- [ ] Clean up
-- [ ] SASS support
 - [ ] Folder layout
 - [ ] API proxy (based on config?)
 - [ ] Meta data injection
 - [ ] Add example of API use and Counter to page
-- [ ] Push to git remote add origin git@github.com:Hyra/Antler.git
