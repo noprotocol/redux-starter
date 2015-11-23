@@ -7,7 +7,6 @@ class Home extends Component {
   }
 
   render() {
-console.log(this.props);
     const { incrementCounter, decrementCounter, counter } = this.props;
     return (
       <div>
