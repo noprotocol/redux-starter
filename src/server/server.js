@@ -62,26 +62,26 @@ app.get('/*', function (req, res) {
 
   match({ routes, location }, (err, redirectLocation, renderProps) => {
 
-  if(err) {
-    console.error(err);
-    return res.status(500).end('Internal server error');
-  }
+    if(err) {
+      console.error(err);
+      return res.status(500).end('Internal server error');
+    }
 
-  if(!renderProps) {
-    return res.status(404).end('Not found');
-  }
+    if(!renderProps) {
+      return res.status(404).end('Not found');
+    }
 
-  // const store = configureStore({user : user, version : packagejson.version});
-  const store = configureStore({version : packagejson.version});
+    // const store = configureStore({user : user, version : packagejson.version});
+    const store = configureStore({version : packagejson.version});
 
-  const InitialView = (
-    <Provider store={store}>
-      <RoutingContext {...renderProps} />
-    </Provider>
-  );
+    const InitialView = (
+      <Provider store={store}>
+        <RoutingContext {...renderProps} />
+      </Provider>
+    );
 
-  // This method waits for all render component promises to resolve before returning to browser
-  fetchComponentDataBeforeRender(store.dispatch, renderProps.components, renderProps.params)
+    // This method waits for all render component promises to resolve before returning to browser
+    fetchComponentDataBeforeRender(store.dispatch, renderProps.components, renderProps.params)
     .then(html => {
       const componentHTML = ReactDOMServer.renderToString(InitialView);
       const initialState = store.getState();
@@ -91,6 +91,7 @@ app.get('/*', function (req, res) {
       console.log(err)
       res.end(renderFullPage("",{}))
     });
+
   });
 
 });
