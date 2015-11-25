@@ -7,12 +7,14 @@ import counter from './counter';
 import version from './version';
 // import layout from './layout';
 // import todos from './todos';
-// import { selectedReddit, postsByReddit } from './reddit';
+import { selectedReddit, postsByReddit } from './reddit';
 
 const rootReducer = combineReducers({
   version: version,
   counter: counter,
-  router : routerStateReducer
+  router : routerStateReducer,
+  postsByReddit: postsByReddit,
+  selectedReddit: selectedReddit
 });
 
 export default rootReducer;

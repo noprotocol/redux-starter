@@ -15,14 +15,21 @@ class App extends Component {
   constructor(props) {
     super(props);
  }
-
+ renderDevTools() {
+  if(process.browser) {
+    return <DevTools />;
+  } else {
+    return null;
+  }
+}
+ 
  render() {
    return (
       <div>
         <Header />
         {!this.props.children && <HomePage />}
         {this.props.children}
-        <DevTools />
+        {this.renderDevTools()}
       </div>
     );
   }
