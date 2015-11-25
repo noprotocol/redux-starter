@@ -14,17 +14,18 @@ class App extends Component {
 
   constructor(props) {
     super(props);
- }
- renderDevTools() {
-  if(process.browser) {
-    return <DevTools />;
-  } else {
-    return null;
   }
-}
- 
- render() {
-   return (
+
+  renderDevTools() {
+    if(process.browser) {
+      return <DevTools />;
+    } else {
+      return null;
+    }
+  }
+
+  render() {
+    return (
       <div>
         <Header />
         {!this.props.children && <HomePage />}
@@ -33,6 +34,7 @@ class App extends Component {
       </div>
     );
   }
+
 }
 
 function mapStateToProps(state) {
