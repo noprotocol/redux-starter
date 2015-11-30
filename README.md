@@ -23,3 +23,4 @@ Menu to about page (routing) with async data
 - [ ] Folder layout
 - [ ] API proxy (based on config?)
 - [ ] Meta data injection
+- [ ] Socket.IO example/implementation
