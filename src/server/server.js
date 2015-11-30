@@ -56,6 +56,23 @@ if(process.env.NODE_ENV !== 'production') {
   app.use('/static', express.static(__dirname + '/../../dist'));
 }
 
+app.get('/api/data', function(req, res) {
+  res.header('Content-Type', 'application/json');
+  res.send({
+    'items': [
+      {
+        'title': 'Lorem ipsum'
+      },
+      {
+        'title': 'dolor amet'
+      },
+      {
+        'title': 'something else'
+      }
+    ]
+  });
+});
+
 app.get('/*', function (req, res) {
 
   const location = createLocation(req.url);
