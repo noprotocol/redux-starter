@@ -12,6 +12,8 @@ import { Provider } from 'react-redux';
 import createLocation from 'history/lib/createLocation';
 import { fetchComponentDataBeforeRender } from '../common/api/fetchComponentDataBeforeRender';
 
+import DocumentMeta from 'react-document-meta';
+
 import configureStore from '../common/store/configureStore';
 import routes from '../common/routes';
 import packagejson from '../../package.json';
@@ -27,6 +29,7 @@ const renderFullPage = (html, initialState) => {
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Isomorphic Redux Example</title>
         <link rel="stylesheet" type="text/css" href="/static/app.css">
+        ${DocumentMeta.renderAsHTML()}
       </head>
       <body>
         <div id="root">${html}</div>

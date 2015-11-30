@@ -15,7 +15,7 @@ class Item extends Component {
     let { items } = this.props;
 
     if(typeof items === 'undefined') {
-      // items = [];
+      items = [];
     }
 
     return (
