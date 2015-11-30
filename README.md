@@ -16,10 +16,10 @@ Menu to about page (routing) with async data
 - [x] Redux Logger
 - [x] Clean up
 - [x] SASS support
+- [x] Add example of API use and Counter to page
 
 ## To Do
 
 - [ ] Folder layout
 - [ ] API proxy (based on config?)
 - [ ] Meta data injection
-- [ ] Add example of API use and Counter to page
