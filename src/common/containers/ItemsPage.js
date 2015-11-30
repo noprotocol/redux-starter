@@ -10,9 +10,10 @@ Items.need = [
 
 function mapStateToProps(state) {
   let { items } = state;
+  items = items.items;
 
   return {
-    items: items.items
+    items: items
   };
 
 };

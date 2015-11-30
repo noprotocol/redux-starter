@@ -7,7 +7,10 @@ class Header extends Component {
     return (
       <div>
         <Link to="/">Home</Link>
+        &nbsp;/&nbsp;
         <Link to="/about">About</Link>
+        &nbsp;/&nbsp;
+        <Link to="/items">Async API Example</Link>
       </div>
     );
   }
