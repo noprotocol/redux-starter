@@ -9,6 +9,9 @@ var webpackConfig = {
     filename: 'bundle.js',
     publicPath: '/static/'
   },
+  resolve: {
+    extensions: ['', '.jsx', '.webpack.js', '.web.js', '.js']
+  },
   plugins: [
     new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.NoErrorsPlugin()
@@ -44,13 +47,22 @@ if (process.env.NODE_ENV === 'production') {
     ]  
   });
 
-}else{
+} else {
 
   webpackConfig = merge(webpackConfig,{
     devtool: 'inline-source-map',
     module: {
       loaders: [{
         test: /\.js$/,
+        loader: 'babel',
+        exclude: /node_modules/,
+        include: __dirname,
+        query: {
+          optional: ['runtime'],
+          stage: 2,
+        }
+      }, {
+        test: /\.jsx$/,
         loader: 'babel',
         exclude: /node_modules/,
         include: __dirname,
@@ -85,7 +97,7 @@ if (process.env.NODE_ENV === 'production') {
     ]},
     entry : [
       'webpack-hot-middleware/client',
-      './src/client/index.js'
+      './src/client/index.jsx'
     ],
     plugins : [
       new webpack.HotModuleReplacementPlugin()
