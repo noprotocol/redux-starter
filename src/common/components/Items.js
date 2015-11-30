@@ -11,18 +11,13 @@ class Item extends Component {
     this.props.fetchItems();
   }
 
-  // renderItems(items) {
-  //   if(typeof items !== 'undefined') {
-  //     return (
-  //       <div>
-  //         {items.map((item, i) =>
-  //         
   render() {
     let { items } = this.props;
-    console.log(this.props);
+
     if(typeof items === 'undefined') {
-      items = [];
+      // items = [];
     }
+
     return (
       <div>
         {items.map((item, i) =>
@@ -31,6 +26,7 @@ class Item extends Component {
       </div>
     );
   }
+
 };
 
 export default Item;
