@@ -24,3 +24,8 @@ Menu to about page (routing) with async data
 - [ ] API proxy (based on config?)
 - [ ] Meta data injection
 - [ ] Socket.IO example/implementation
+- [ ] Live working example on heroku
+- [ ] Documentation on how to get it up and running (though obvious)
+- [ ] Tests (with Jest?)
+- [ ] Rethink containers
+
