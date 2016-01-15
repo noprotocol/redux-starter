@@ -19,7 +19,6 @@ Menu to about page (routing) with async data
 - [x] Add example of API use and Counter to page
 
 ## To Do
-
 - [ ] Folder layout
 - [ ] API proxy (based on config?)
 - [ ] Meta data injection
@@ -28,4 +27,5 @@ Menu to about page (routing) with async data
 - [ ] Documentation on how to get it up and running (though obvious)
 - [ ] Tests (with Jest?)
 - [ ] Rethink containers
-
+- [ ] .editorconfig
+- [ ] .jshintrc
