@@ -16,6 +16,6 @@ export default (
     <Route path="home" component={HomePage} />
     <Route path="about" component={AboutPage} />
     <Route path="items" component={ItemsPage} />
-    <Route path="*" component={error404}/>
+    <Route path="*" component={error404} />
   </Route>
 );
