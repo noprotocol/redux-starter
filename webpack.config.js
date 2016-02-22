@@ -57,7 +57,6 @@ if (process.env.NODE_ENV === 'production') {
         test: /\.js$/,
         loader: 'babel',
         // exclude: /node_modules/,
-        // include: __dirname,
         include: path.resolve(__dirname, "src"),
         query: {
           // optional: ['runtime'],
