@@ -48,7 +48,7 @@ if (process.env.NODE_ENV === 'production') {
     ]
   });
 
-}else{
+} else {
 
   webpackConfig = merge(webpackConfig,{
     devtool: 'inline-source-map',
@@ -92,9 +92,9 @@ if (process.env.NODE_ENV === 'production') {
     ],
     plugins : [
       new webpack.HotModuleReplacementPlugin()
-    ]  
+    ]
   });
-  
+
 }
 
 module.exports = webpackConfig;
