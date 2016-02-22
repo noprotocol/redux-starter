@@ -1,12 +1,15 @@
 import { createStore, applyMiddleware, compose } from 'redux';
 import DevTools from '../../server/devtools_v3';
 import { persistState } from 'redux-devtools';
-import { reduxReactRouter } from 'redux-router';
 import thunk from 'redux-thunk';
-import createHistory from 'history/lib/createBrowserHistory';
+
+import { Router, Route, browserHistory } from 'react-router'
+import { syncHistory, routeReducer } from 'react-router-redux'
+
 import createLogger from 'redux-logger';
 import promiseMiddleware from '../api/promiseMiddleware';
 import rootReducer from '../reducers';
+
 
 const middlewareBuilder = () => {
 
@@ -18,18 +21,14 @@ const middlewareBuilder = () => {
     if(process.env.NODE_ENV === 'production' || process.env.NODE_ENV === 'test'){
       middleware = applyMiddleware(...universalMiddleware);
       allComposeElements = [
-        middleware,
-        reduxReactRouter({
-          createHistory
-        }),
+        middleware
       ]
     } else {
+      const reduxRouterMiddleware = syncHistory(browserHistory);
+      let universalMiddleware = [thunk,promiseMiddleware,reduxRouterMiddleware];
       middleware = applyMiddleware(...universalMiddleware,createLogger({collapsed: true}));
       allComposeElements = [
         middleware,
-        reduxReactRouter({
-          createHistory
-        }),
         DevTools.instrument(),
         persistState(
           window.location.href.match(
@@ -60,6 +59,11 @@ if(process.browser) {
 
 export default function configureStore(initialState) {
   const store = finalCreateStore(rootReducer, initialState);
+
+  if(process.browser) {
+    const reduxRouterMiddleware = syncHistory(browserHistory);
+    reduxRouterMiddleware.listenForReplays(store, ({ router }) => router.location);
+  }
 
   if (module.hot) {
     // Enable Webpack hot module replacement for reducers
