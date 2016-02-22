@@ -21,3 +21,9 @@ ReactDOM.render(
   </Provider>,
   document.getElementById('root')
 );
+
+// TODO: Have this as an option in npm scripts?
+// TODO: This broke with devtools v3, salvage or bin?
+// if (process.env.NODE_ENV !== 'production') {
+  // require('../server/devtools_v3')(store);
+// }
