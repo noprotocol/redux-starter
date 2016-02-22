@@ -7,7 +7,7 @@ import webpackHotMiddleware from 'webpack-hot-middleware';
 
 import React from 'react';
 import ReactDOMServer from 'react-dom/server';
-import { RoutingContext, match } from 'react-router';
+import { RouterContext, match } from 'react-router';
 import { Provider } from 'react-redux';
 import createLocation from 'history/lib/createLocation';
 import { fetchComponentDataBeforeRender } from '../common/api/fetchComponentDataBeforeRender';
@@ -96,7 +96,7 @@ app.get('/*', function (req, res) {
 
     const InitialView = (
       <Provider store={store}>
-        <RoutingContext {...renderProps} />
+        <RouterContext{...renderProps} />
       </Provider>
     );
 
