@@ -27,3 +27,10 @@ Menu to about page (routing) with async data
 - [ ] Tests (with Jest?)
 - [ ] Rethink containers
 - [ ] .jshintrc
+
+
+Fix:
+npm WARN peerDependencies The peer dependency file-loader@* included from url-loader will no
+npm WARN peerDependencies longer be automatically installed to fulfill the peerDependency 
+npm WARN peerDependencies in npm 3+. Your application will need to depend on it explicitly.
+npm WARN deprecated graceful-fs@2.0.3: graceful-fs version 3 and before will fail on newer node releases. Please update to graceful-fs@^4.0.0 as soon as possible.
