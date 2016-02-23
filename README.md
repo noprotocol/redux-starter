@@ -1,3 +1,5 @@
+[![build status](https://img.shields.io/travis/Hyra/Antler/develop.svg?style=flat-square)](https://travis-ci.org/Hyra/Antler)
+
 # Redux Starter
 A boilerplate starter app to kickstart your next front-end project
 
@@ -34,3 +36,7 @@ npm WARN peerDependencies The peer dependency file-loader@* included from url-lo
 npm WARN peerDependencies longer be automatically installed to fulfill the peerDependency 
 npm WARN peerDependencies in npm 3+. Your application will need to depend on it explicitly.
 npm WARN deprecated graceful-fs@2.0.3: graceful-fs version 3 and before will fail on newer node releases. Please update to graceful-fs@^4.0.0 as soon as possible.
+npm WARN deprecated npmconf@2.1.2: this package has been reintegrated into npm and is now out of date with respect to npm
+npm WARN optional dep failed, continuing fsevents@1.0.7
+npm WARN deprecated lodash@1.0.2: lodash@<3.0.0 is no longer maintained. Upgrade to lodash@^4.0.0.
+npm WARN deprecated graceful-fs@1.2.3: graceful-fs version 3 and before will fail on newer node releases. Please update to graceful-fs@^4.0.0 as soon as possible.
