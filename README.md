@@ -1,4 +1,6 @@
 [![build status](https://img.shields.io/travis/Hyra/Antler/develop.svg?style=flat-square)](https://travis-ci.org/Hyra/Antler)
+[![Dependency Status](https://david-dm.org/Hyra/Antler/develop.svg?style=flat-square)](https://david-dm.org/Hyra/Antler)
+
 
 # Redux Starter
 A boilerplate starter app to kickstart your next front-end project
