@@ -49,7 +49,8 @@
   "scripts": {
     "start": "NODE_ENV=development node src/server/index.js --progress --colors --profile",
     "start-prod": "NODE_ENV=production node src/server/index.js --progress --colors --profile",
-    "build": "npm run clean && NODE_ENV=production webpack -p --progress --colors --profile"
+    "build": "npm run clean && NODE_ENV=production webpack -p --progress --colors --profile",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -60,5 +61,8 @@
   "bugs": {
     "url": "https://github.com/noprotocol/redux-starter/issues"
   },
-  "homepage": "https://github.com/noprotocol/redux-starter#readme"
+  "homepage": "https://github.com/noprotocol/redux-starter#readme",
+  "devDependencies": {
+    "jest-cli": "^0.8.2"
+  }
 }
