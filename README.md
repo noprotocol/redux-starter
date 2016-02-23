@@ -1,5 +1,6 @@
 [![build status](https://img.shields.io/travis/Hyra/Antler/develop.svg?style=flat-square)](https://travis-ci.org/Hyra/Antler)
 [![Dependency Status](https://david-dm.org/Hyra/Antler/develop.svg?style=flat-square)](https://david-dm.org/Hyra/Antler)
+[![devDependency Status](https://david-dm.org/Hyra/Antler/develop/dev-status.svg?style=flat-square)](https://david-dm.org/Hyra/Antler/develop#info=devDependencies)
 
 
 # Redux Starter
