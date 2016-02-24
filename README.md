@@ -2,6 +2,10 @@
 [![Dependency Status](https://david-dm.org/Hyra/Antler/develop.svg?style=flat-square)](https://david-dm.org/Hyra/Antler)
 [![devDependency Status](https://david-dm.org/Hyra/Antler/develop/dev-status.svg?style=flat-square)](https://david-dm.org/Hyra/Antler/develop#info=devDependencies)
 
+> [![Demo on Heroku](https://img.shields.io/badge/demo-heroku-brightgreen.svg?style=flat-square)](https://react-redux.herokuapp.com)
+
+[![npm version](https://img.shields.io/npm/v/react-router-redux.svg?style=flat-square)](https://www.npmjs.com/package/react-router-redux)
+[![npm downloads](https://img.shields.io/npm/dm/react-router-redux.svg?style=flat-square)](https://www.npmjs.com/package/react-router-redux)
 
 # Redux Starter
 A boilerplate starter app to kickstart your next front-end project
