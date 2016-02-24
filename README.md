@@ -8,44 +8,31 @@
 [![npm downloads](https://img.shields.io/npm/dm/react-router-redux.svg?style=flat-square)](https://www.npmjs.com/package/react-router-redux)
 
 # Redux Starter
-A boilerplate starter app to kickstart your next front-end project
+A starter boilerplate app to kickstart your next Front-end project using Redux, React, Webpack, Express
 
-# Setup
-Homepage with counter sample
-Menu to about page (routing) with async data
+# The goal
+The aim of this boilerplate is to stay small yet complete. It contains all the hot new toys you want to use, including examples on how to use them, but will try and stay small so it's not causing confusion through a lot of bloat-code.
 
 # Features
-- [x] React
-- [x] Redux
-- [x] Webpack build tool
-- [x] Hot Replacement Module for components and reducers
-- [x] Redux Dev Tools
-- [x] React Router
-- [x] Universal Rendering
-- [x] Redux Logger
-- [x] SASS support
-- [x] Add example of API use and Counter to page
-- [x] Meta data injection
-- [x] .editorconfig
+- React 0.14.3
+- Redux 3.0.0
+- Universal Rendering!
+- React Router 2.0.0
+- React Router Redux 3.0.0
+- React Transform (hmr) 1.0.0
+- Redux DevTools 3.0.0
+- Redbox React - 1.2.0
+- Webpack build tool
+- Hot Replacement Module for components and reducers
+- Redux Dev Tools
+- Redux Logger
+- SASS support
+- Meta data injection
+- Jest testing
 
-## To Do
-- [ ] API proxy (based on config?)
+## Roadmap
+- [ ] Dynamic API proxy
 - [ ] Socket.IO example/implementation
-- [ ] Live working example on heroku
+- [ ] Live working example on Heroku
 - [ ] Documentation on how to get it up and running (though obvious)
-- [ ] Tests (with Jest?)
-- [ ] Rethink containers
-- [ ] .jshintrc
-
-
-Fix:
-```
-npm WARN peerDependencies The peer dependency file-loader@* included from url-loader will no
-npm WARN peerDependencies longer be automatically installed to fulfill the peerDependency 
-npm WARN peerDependencies in npm 3+. Your application will need to depend on it explicitly.
-npm WARN deprecated graceful-fs@2.0.3: graceful-fs version 3 and before will fail on newer node releases. Please update to graceful-fs@^4.0.0 as soon as possible.
-npm WARN deprecated npmconf@2.1.2: this package has been reintegrated into npm and is now out of date with respect to npm
-npm WARN optional dep failed, continuing fsevents@1.0.7
-npm WARN deprecated lodash@1.0.2: lodash@<3.0.0 is no longer maintained. Upgrade to lodash@^4.0.0.
-npm WARN deprecated graceful-fs@1.2.3: graceful-fs version 3 and before will fail on newer node releases. Please update to graceful-fs@^4.0.0 as soon as possible.
-```
+- [ ] Rethink smart/dumb containers
