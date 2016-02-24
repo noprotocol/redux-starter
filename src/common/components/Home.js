@@ -7,7 +7,9 @@ class Home extends Component {
   }
 
   render() {
-    const { incrementCounter, decrementCounter, counter } = this.props;
+    const { counter } = this.props;
+    let incrementCounter = this.props.actions.counterActions.incrementCounter;
+    let decrementCounter = this.props.actions.counterActions.decrementCounter;
     return (
       <div>
         <h1>Homepage</h1>

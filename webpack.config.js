@@ -26,8 +26,12 @@ if (process.env.NODE_ENV === 'production') {
       loaders: [{
         test: /\.js$/,
         loader: 'babel',
-        exclude: /node_modules/,
-        include: __dirname
+        // exclude: /node_modules/,
+        include: path.resolve(__dirname, "src"),
+        query: {
+          cacheDirectory: true,
+          presets: ['react', 'es2015', 'stage-2']
+        }
       },
       { test: /\.(png|jpg|gif|jpeg)$/, loader: 'url-loader?limit=8192'},
       // { test: /\.css$/, loader: ExtractTextPlugin.extract('style-loader', 'css-loader?sourceMap') },
@@ -41,10 +45,10 @@ if (process.env.NODE_ENV === 'production') {
       }),
       new ExtractTextPlugin("app.css"),
       new webpack.optimize.UglifyJsPlugin({minimize: true})
-    ]  
+    ]
   });
 
-}else{
+} else {
 
   webpackConfig = merge(webpackConfig,{
     devtool: 'inline-source-map',
@@ -52,18 +56,16 @@ if (process.env.NODE_ENV === 'production') {
       loaders: [{
         test: /\.js$/,
         loader: 'babel',
-        exclude: /node_modules/,
-        include: __dirname,
+        // exclude: /node_modules/,
+        include: path.resolve(__dirname, "src"),
         query: {
-          optional: ['runtime'],
-          stage: 2,
+          // optional: ['runtime'],
+          cacheDirectory: true,
+          presets: ['react', 'es2015', 'stage-2'],
           env: {
             development: {
               plugins: [
-                'react-transform'
-              ],
-              extra: {
-                'react-transform': {
+                ['react-transform', {
                   transforms: [{
                     transform:  'react-transform-hmr',
                     imports: ['react'],
@@ -72,9 +74,9 @@ if (process.env.NODE_ENV === 'production') {
                   {
                     transform: 'react-transform-catch-errors',
                     imports: ['react','redbox-react' ]
-                  }
-                ]}
-              }
+                  }]
+                }]
+              ]
             }
           }
         }
@@ -89,9 +91,9 @@ if (process.env.NODE_ENV === 'production') {
     ],
     plugins : [
       new webpack.HotModuleReplacementPlugin()
-    ]  
+    ]
   });
-  
+
 }
 
 module.exports = webpackConfig;

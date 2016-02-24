@@ -3,7 +3,7 @@
 
 import WebpackDevServer from "webpack-dev-server";
 import webpack from "webpack";
-import config from "../../webpack.config.dev";
+import config from "../../webpack.config";
 
 var server = new WebpackDevServer(webpack(config), {
   // webpack-dev-server options

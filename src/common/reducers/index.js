@@ -1,18 +1,17 @@
 import { combineReducers } from 'redux';
-import { routerStateReducer } from 'redux-router';
-// import undoable from 'redux-undo';
+// import { routerStateReducer } from 'redux-router';
+import { Router, Route, browserHistory } from 'react-router'
+import { syncHistory, routeReducer } from 'react-router-redux'
 
-// import user from './user';
 import counter from './counter';
 import version from './version';
-// import layout from './layout';
-// import todos from './todos';
-// import { selectedReddit, postsByReddit } from './reddit';
+import items from './item';
 
 const rootReducer = combineReducers({
   version: version,
   counter: counter,
-  router : routerStateReducer
+  router: routeReducer,
+  items: items,
 });
 
 export default rootReducer;

@@ -7,10 +7,12 @@ import webpackHotMiddleware from 'webpack-hot-middleware';
 
 import React from 'react';
 import ReactDOMServer from 'react-dom/server';
-import { RoutingContext, match } from 'react-router';
+import { RouterContext, match } from 'react-router';
 import { Provider } from 'react-redux';
 import createLocation from 'history/lib/createLocation';
 import { fetchComponentDataBeforeRender } from '../common/api/fetchComponentDataBeforeRender';
+
+import DocumentMeta from 'react-document-meta';
 
 import configureStore from '../common/store/configureStore';
 import routes from '../common/routes';
@@ -27,6 +29,7 @@ const renderFullPage = (html, initialState) => {
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Isomorphic Redux Example</title>
         <link rel="stylesheet" type="text/css" href="/static/app.css">
+        ${DocumentMeta.renderAsHTML()}
       </head>
       <body>
         <div id="root">${html}</div>
@@ -56,32 +59,49 @@ if(process.env.NODE_ENV !== 'production') {
   app.use('/static', express.static(__dirname + '/../../dist'));
 }
 
+app.get('/api/data', function(req, res) {
+  res.header('Content-Type', 'application/json');
+  res.send({
+    'items': [
+      {
+        'title': 'Lorem ipsum'
+      },
+      {
+        'title': 'dolor amet'
+      },
+      {
+        'title': 'something else'
+      }
+    ]
+  });
+});
+
 app.get('/*', function (req, res) {
 
   const location = createLocation(req.url);
 
   match({ routes, location }, (err, redirectLocation, renderProps) => {
 
-  if(err) {
-    console.error(err);
-    return res.status(500).end('Internal server error');
-  }
+    if(err) {
+      console.error(err);
+      return res.status(500).end('Internal server error');
+    }
 
-  if(!renderProps) {
-    return res.status(404).end('Not found');
-  }
-  
-  // const store = configureStore({user : user, version : packagejson.version});
-  const store = configureStore({version : packagejson.version});
+    if(!renderProps) {
+      return res.status(404).end('Not found');
+    }
 
-  const InitialView = (
-    <Provider store={store}>
-      <RoutingContext {...renderProps} />
-    </Provider>
-  );
+    // const store = configureStore({user : user, version : packagejson.version});
+    const store = configureStore({version : packagejson.version});
 
-  // This method waits for all render component promises to resolve before returning to browser
-  fetchComponentDataBeforeRender(store.dispatch, renderProps.components, renderProps.params)
+    const InitialView = (
+      <Provider store={store}>
+        <RouterContext{...renderProps} />
+      </Provider>
+    );
+
+    // This method waits for all render component promises to resolve before returning to browser
+    fetchComponentDataBeforeRender(store.dispatch, renderProps.components, renderProps.params)
     .then(html => {
       const componentHTML = ReactDOMServer.renderToString(InitialView);
       const initialState = store.getState();
@@ -91,11 +111,12 @@ app.get('/*', function (req, res) {
       console.log(err)
       res.end(renderFullPage("",{}))
     });
+
   });
 
 });
 
-const server = app.listen(3000, function () {
+const server = app.listen(process.env.PORT || 3000, function () {
   const host = server.address().address;
   const port = server.address().port;
   console.log('Example app listening at http://%s:%s', host, port);
