@@ -1,6 +1,6 @@
 {
   "name": "redux-starter",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Most Redux boilerplates contain bloat or 'magic'. The goal of this repo is to be transparent and minimalistic whilst giving a starting point for a Redux App",
   "main": "index.js",
   "dependencies": {
