@@ -12,6 +12,7 @@ import rootReducer from '../reducers';
 
 
 export default function configureStore(history, initialState = {}) {
+
   const enhancer = compose(
     applyMiddleware(
       thunk,
@@ -21,9 +22,10 @@ export default function configureStore(history, initialState = {}) {
     ),
     DevTools.instrument(),
     persistState(
+      process.browser ?
       window.location.href.match(
         /[?&]debug_session=([^&]+)\b/
-      )
+      ) : null
     )
   );
 
