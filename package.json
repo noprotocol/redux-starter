@@ -1,7 +1,23 @@
 {
   "name": "redux-starter",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "Most Redux boilerplates contain bloat or 'magic'. The goal of this repo is to be transparent and minimalistic whilst giving a starting point for a Redux App",
+  "author": "Stef van den Ham (stef@mindthecode.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Hyra/react-redux-hot-universal-boilerplate/issues"
+  },
+  "homepage": "https://github.com/Hyra/react-redux-hot-universal-boilerplate",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Hyra/react-redux-hot-universal-boilerplate.git"
+  },
+  "scripts": {
+    "start": "NODE_ENV=development node src/server/index.js --progress --colors --profile",
+    "start-prod": "NODE_ENV=production node src/server/index.js --progress --colors --profile",
+    "build": "npm run clean && NODE_ENV=production webpack -p --progress --colors --profile",
+    "test": "jest"
+  },
   "main": "index.js",
   "dependencies": {
     "axios": "^0.9.1",
@@ -28,7 +44,7 @@
     "react-dom": "^0.14.3",
     "react-redux": "^4.4.0",
     "react-router": "^2.0.0",
-    "react-router-redux": "^3.0.0",
+    "react-router-redux": "^4.0.0",
     "react-transform-catch-errors": "^1.0.0",
     "react-transform-hmr": "^1.0.0",
     "redbox-react": "^1.2.0",
@@ -37,6 +53,7 @@
     "redux-devtools-dock-monitor": "^1.0.0-beta-3",
     "redux-devtools-log-monitor": "^1.0.0-beta-3",
     "redux-logger": "^2.0.2",
+    "redux-slider-monitor": "^1.0.2",
     "redux-thunk": "^1.0.0",
     "redux-undo": "^0.6.0",
     "sass-loader": "^3.1.2",
@@ -46,22 +63,6 @@
     "webpack-dev-middleware": "^1.2.0",
     "webpack-hot-middleware": "^2.2.0"
   },
-  "scripts": {
-    "start": "NODE_ENV=development node src/server/index.js --progress --colors --profile",
-    "start-prod": "NODE_ENV=production node src/server/index.js --progress --colors --profile",
-    "build": "npm run clean && NODE_ENV=production webpack -p --progress --colors --profile",
-    "test": "jest"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/noprotocol/redux-starter.git"
-  },
-  "author": "Stef van den Ham (stef@mindthecode.com)",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/noprotocol/redux-starter/issues"
-  },
-  "homepage": "https://github.com/noprotocol/redux-starter#readme",
   "devDependencies": {
     "jest-cli": "^0.8.2"
   }

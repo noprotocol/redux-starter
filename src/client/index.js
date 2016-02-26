@@ -4,20 +4,24 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { Router, Route, browserHistory } from 'react-router'
-import { syncHistory, routeReducer } from 'react-router-redux'
+import { syncHistoryWithStore, routeReducer } from 'react-router-redux'
 
 import configureStore from '../common/store/configureStore';
 import routes from '../common/routes';
 
+import rootReducer from '../common/reducers';
+
 import "../../styles/index.scss";
 
 const initialState = window.__INITIAL_STATE__;
-const store = configureStore(initialState);
+const store = configureStore(browserHistory, initialState);
 const rootElement = document.getElementById('root');
+
+const history = syncHistoryWithStore(browserHistory, store);
 
 ReactDOM.render(
   <Provider store={store}>
-    <Router children={routes} history={browserHistory} />
+    <Router children={routes} history={history} />
   </Provider>,
   document.getElementById('root')
 );
