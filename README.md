@@ -2,13 +2,8 @@
 [![Dependency Status](https://david-dm.org/Hyra/Antler/develop.svg?style=flat-square)](https://david-dm.org/Hyra/Antler)
 [![devDependency Status](https://david-dm.org/Hyra/Antler/develop/dev-status.svg?style=flat-square)](https://david-dm.org/Hyra/Antler/develop#info=devDependencies)
 
-> [![Demo on Heroku](https://img.shields.io/badge/demo-heroku-brightgreen.svg?style=flat-square)](https://react-redux.herokuapp.com)
-
-[![npm version](https://img.shields.io/npm/v/react-router-redux.svg?style=flat-square)](https://www.npmjs.com/package/react-router-redux)
-[![npm downloads](https://img.shields.io/npm/dm/react-router-redux.svg?style=flat-square)](https://www.npmjs.com/package/react-router-redux)
-
-# Redux Starter
-A starter boilerplate app to kickstart your next Front-end project using Redux, React, Webpack, Express
+# What is Antlter
+Antler is a starterkit or boilerplate app to kickstart your next Front-end project using all the bleeding edge libraries in an easy to understand architecture.
 
 # The goal
 The aim of this boilerplate is to stay small yet complete. It contains all the hot new toys you want to use, including examples on how to use them, but will try and stay small so it's not causing confusion through a lot of bloat-code.
@@ -21,13 +16,14 @@ The aim of this boilerplate is to stay small yet complete. It contains all the h
 - React Router Redux 3.0.0
 - React Transform (hmr) 1.0.0
 - Redux DevTools 3.0.0
+- Redux LogMonitor
+- Redux SliderMonitor
 - Redbox React - 1.2.0
-- Webpack build tool
-- Hot Replacement Module for components and reducers
-- Redux Dev Tools
 - Redux Logger
+- Webpack as the build tool
+- Hot Replacement Module for components and reducers
 - SASS support
-- Meta data injection
+- Meta data injection for your SEO wishes
 - Jest testing
 
 ## Roadmap
@@ -36,3 +32,4 @@ The aim of this boilerplate is to stay small yet complete. It contains all the h
 - [ ] Live working example on Heroku
 - [ ] Documentation on how to get it up and running (though obvious)
 - [ ] Rethink smart/dumb containers
+- [ ] Rethink testing with Jest, maybe switch to `expect` ?
