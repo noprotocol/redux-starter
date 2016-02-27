@@ -1,6 +1,6 @@
 {
   "name": "redux-starter",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "Most Redux boilerplates contain bloat or 'magic'. The goal of this repo is to be transparent and minimalistic whilst giving a starting point for a Redux App",
   "author": "Stef van den Ham (stef@mindthecode.com)",
   "license": "ISC",
