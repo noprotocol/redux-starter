@@ -1,10 +1,10 @@
 [![Dependency Status](https://david-dm.org/Hyra/Antler.svg?style=flat-square)](https://david-dm.org/Hyra/Antler)
 [![devDependency Status](https://david-dm.org/Hyra/Antler/dev-status.svg?style=flat-square)](https://david-dm.org/Hyra/Antler/develop#info=devDependencies)
 [![build status](https://img.shields.io/travis/Hyra/Antler.svg?style=flat-square)](https://travis-ci.org/Hyra/Antler)
-[![Github All Releases](https://img.shields.io/github/downloads/Hyra/Antler/total.svg?style=flat-square)](https://github.com/Hyra/Antler)
+[![Github All Releases](https://img.shields.io/github/downloads/Hyra/Antler/total.svg?style=flat-square)](https://github.com/Hyra/Antler/releases)
 
-[![GitHub release](https://img.shields.io/github/release/Hyra/Antler.svg?style=flat-square)](https://github.com/Hyra/Antler)
-[![Join the chat at https://gitter.im/Hyra/Antler](https://badges.gitter.im/Hyra/Antler.svg)](https://gitter.im/Hyra/Antler)
+[![GitHub release](https://img.shields.io/github/release/Hyra/Antler.svg?style=flat-square)](https://github.com/Hyra/Antler/releases)
+[![Join the chat at https://gitter.im/Hyra/Antler](https://img.shields.io/gitter/room/Hyra/Antler.svg?style=flat-square)](https://gitter.im/Hyra/Antler)
 
 # What is Antler
 Antler is a starterkit or boilerplate app to kickstart your next Front-end project using all the bleeding edge libraries in an easy to understand architecture.
