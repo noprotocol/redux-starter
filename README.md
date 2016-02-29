@@ -1,4 +1,4 @@
-[![GitHub release](https://img.shields.io/github/release/Hyr/Antler.svg?style=flat-square)](https://github.com/Hyra/Antler)
+[![GitHub release](https://img.shields.io/github/release/Hyra/Antler.svg?style=flat-square)](https://github.com/Hyra/Antler)
 [![Github All Releases](https://img.shields.io/github/downloads/Hyra/Antler/total.svg?style=flat-square)](https://github.com/Hyra/Antler)
 [![build status](https://img.shields.io/travis/Hyra/Antler.svg?style=flat-square)](https://travis-ci.org/Hyra/Antler)
 [![Dependency Status](https://david-dm.org/Hyra/Antler.svg?style=flat-square)](https://david-dm.org/Hyra/Antler)
