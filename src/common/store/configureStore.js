@@ -23,9 +23,9 @@ export default function configureStore(history, initialState = {}) {
     DevTools.instrument(),
     persistState(
       process.browser ?
-      window.location.href.match(
-        /[?&]debug_session=([^&]+)\b/
-      ) : null
+        window.location.href.match(
+          /[?&]debug_session=([^&]+)\b/
+        ) : null
     )
   );
 
