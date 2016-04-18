@@ -103,7 +103,7 @@ app.get('/*', function (req, res) {
     // This method waits for all render component promises to resolve before returning to browser
     fetchComponentDataBeforeRender(store.dispatch, renderProps.components, renderProps.params)
     .then(html => {
-      const componentHTML = ReactDOMServer.renderToString(InitialView);
+      const componentHTML = ReactDOMServer.renderToStaticMarkup(InitialView);
       const initialState = store.getState();
       console.log('XXXXXXXXX\n\n');
       console.log(initialState);

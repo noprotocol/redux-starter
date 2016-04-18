@@ -11,6 +11,6 @@ export function fetchItems() {
   console.log('AAAAAA');
   return {
     type: ITEMS_GET,
-    promise: request.get('/api/data')
+    promise: request.get('http://localhost:3000/api/data')
   }
 };
