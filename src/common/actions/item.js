@@ -8,6 +8,6 @@ export const ITEMS_GET_FAILURE = 'ITEMS_GET_FAILURE';
 export function fetchItems() {
   return {
     type: ITEMS_GET,
-    promise: request.get('/api/data')
+    promise: request.get('http://localhost:3000/api/data')
   }
 };
