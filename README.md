@@ -9,20 +9,23 @@
 # What is Antler
 Antler is a starterkit or boilerplate app to kickstart your next Front-end project using all the bleeding edge libraries in an easy to understand architecture.
 
+# Demo
+You can find a running copy of this [here](https://antler-demo.herokuapp.com). Make sure you check out the generated HTML source for the Universal bit.
+
 # The goal
 The aim of this boilerplate is to stay small yet complete. It contains all the hot new toys you want to use, including examples on how to use them, but will try and stay small so it's not causing confusion through a lot of bloat-code.
 
 # Features
-- React 0.14.3
-- Redux 3.0.0
-- Universal Rendering!
-- React Router 2.0.0
-- React Router Redux 3.0.0
-- React Transform (hmr) 1.0.0
-- Redux DevTools 3.0.0
+- React 15.0.1
+- Redux 3.4.0
+- Universal Rendering !
+- React Router 2.2.1
+- React Router Redux 4.0.2
+- React Transform (hmr) 1.0.4
+- Redux DevTools 3.2.0
 - Redux LogMonitor
 - Redux SliderMonitor
-- Redbox React - 1.2.0
+- Redbox React - 1.2.3
 - Redux Logger
 - Webpack as the build tool
 - Hot Replacement Module for components and reducers

@@ -1,16 +1,16 @@
 {
   "name": "redux-starter",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Most Redux boilerplates contain bloat or 'magic'. The goal of this repo is to be transparent and minimalistic whilst giving a starting point for a Redux App",
   "author": "Stef van den Ham (stef@mindthecode.com)",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Hyra/react-redux-hot-universal-boilerplate/issues"
+    "url": "https://github.com/Hyra/Antler/issues"
   },
-  "homepage": "https://github.com/Hyra/react-redux-hot-universal-boilerplate",
+  "homepage": "https://github.com/Hyra/Antler",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Hyra/react-redux-hot-universal-boilerplate.git"
+    "url": "https://github.com/Hyra/Antler.git"
   },
   "scripts": {
     "start": "NODE_ENV=development node src/server/index.js --progress --colors --profile",
@@ -34,7 +34,7 @@
     "expect": "^1.16.0",
     "express": "^4.13.4",
     "extract-text-webpack-plugin": "^1.0.1",
-    "history": "^2.0.1",
+    "history": "^2.0.2",
     "jsdom-no-contextify": "^3.1.0",
     "merge": "^1.2.0",
     "mocha": "^2.4.5",
@@ -42,8 +42,8 @@
     "react": "^15.0.1",
     "react-document-meta": "^2.0.3",
     "react-dom": "^15.0.1",
-    "react-redux": "^4.4.4",
-    "react-router": "^2.2.1",
+    "react-redux": "^4.4.5",
+    "react-router": "^2.2.4",
     "react-router-redux": "^4.0.2",
     "react-transform-catch-errors": "^1.0.2",
     "react-transform-hmr": "^1.0.4",
@@ -51,7 +51,7 @@
     "redux": "^3.4.0",
     "redux-devtools": "^3.2.0",
     "redux-devtools-dock-monitor": "^1.1.1",
-    "redux-devtools-log-monitor": "^1.0.9",
+    "redux-devtools-log-monitor": "^1.0.11",
     "redux-logger": "^2.6.1",
     "redux-slider-monitor": "^1.0.5",
     "redux-thunk": "^2.0.1",
@@ -59,11 +59,11 @@
     "sass-loader": "^3.2.0",
     "style-loader": "^0.13.1",
     "url-loader": "^0.5.7",
-    "webpack": "^1.12.15",
+    "webpack": "^1.13.0",
     "webpack-dev-middleware": "^1.6.1",
     "webpack-hot-middleware": "^2.10.0"
   },
   "devDependencies": {
-    "jest-cli": "^11.0.0"
+    "jest-cli": "^11.0.2"
   }
 }
