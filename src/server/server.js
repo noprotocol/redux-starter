@@ -105,9 +105,6 @@ app.get('/*', function (req, res) {
     .then(html => {
       const componentHTML = ReactDOMServer.renderToStaticMarkup(InitialView);
       const initialState = store.getState();
-      console.log('XXXXXXXXX\n\n');
-      console.log(initialState);
-      console.log('XXXXXXXXX\n\n');
       res.status(200).end(renderFullPage(componentHTML,initialState))
     })
     .catch(err => {
