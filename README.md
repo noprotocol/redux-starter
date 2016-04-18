@@ -9,6 +9,9 @@
 # What is Antler
 Antler is a starterkit or boilerplate app to kickstart your next Front-end project using all the bleeding edge libraries in an easy to understand architecture.
 
+# Demo
+You can find a running copy of this [here](https://antler-demo.herokuapp.com). Make sure you check out the generated HTML source for the Universal bit.
+
 # The goal
 The aim of this boilerplate is to stay small yet complete. It contains all the hot new toys you want to use, including examples on how to use them, but will try and stay small so it's not causing confusion through a lot of bloat-code.
 
