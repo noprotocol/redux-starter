@@ -12,4 +12,3 @@ class Error404 extends Component {
 }
 
 export default Error404;
-

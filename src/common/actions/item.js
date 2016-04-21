@@ -8,6 +8,6 @@ export const ITEMS_GET_FAILURE = 'ITEMS_GET_FAILURE';
 export function fetchItems() {
   return {
     type: ITEMS_GET,
-    promise: request.get((process.env.URL ? process.env.URL : 'http://localhost:3000') + '/api/data') // Note that this need to be an absolute URL for the server rendering part to be able to get the items into the initialState
-  }
+    promise: request.get('/api/data')
+  };
 };

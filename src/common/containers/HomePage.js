@@ -12,7 +12,7 @@ function mapStateToProps(state) {
 }
 
 function mapDispatchToProps(dispatch) {
-return {
+  return {
     actions: {
       counterActions: bindActionCreators(CounterActions, dispatch)
     }
@@ -20,4 +20,3 @@ return {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Home);
-

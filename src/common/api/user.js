@@ -7,7 +7,7 @@ export function getUser(callback) {
       dept : 'Web Team',
       lastLogin : new Date(),
       email : 'john@smith.com',
-      id : 'abcde1234' 
+      id : 'abcde1234'
     });
   }, 500);
 

@@ -3,13 +3,12 @@ import DevTools from '../../server/devtools_v3';
 import { persistState } from 'redux-devtools';
 import thunk from 'redux-thunk';
 
-import { Router, Route, browserHistory } from 'react-router'
-import { syncHistoryWithStore, routeReducer, routerMiddleware } from 'react-router-redux'
+import { Router, Route, browserHistory } from 'react-router';
+import { syncHistoryWithStore, routeReducer, routerMiddleware } from 'react-router-redux';
 
 import createLogger from 'redux-logger';
 import promiseMiddleware from '../api/promiseMiddleware';
 import rootReducer from '../reducers';
-
 
 export default function configureStore(history, initialState = {}) {
 
@@ -18,7 +17,7 @@ export default function configureStore(history, initialState = {}) {
       thunk,
       promiseMiddleware,
       routerMiddleware(history),
-      createLogger({collapsed: true}),
+      createLogger({collapsed: true})
     ),
     DevTools.instrument(),
     persistState(
@@ -40,4 +39,3 @@ export default function configureStore(history, initialState = {}) {
   return store;
 
 };
-

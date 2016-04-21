@@ -49,7 +49,7 @@ const renderFullPage = (html, initialState) => {
       </body>
     </html>
   `;
-}
+};
 
 if(process.env.NODE_ENV !== 'production') {
   const compiler = webpack(webpackConfig);
@@ -105,11 +105,11 @@ app.get('/*', function (req, res) {
     .then(html => {
       const componentHTML = ReactDOMServer.renderToStaticMarkup(InitialView);
       const initialState = store.getState();
-      res.status(200).end(renderFullPage(componentHTML,initialState))
+      res.status(200).end(renderFullPage(componentHTML,initialState));
     })
     .catch(err => {
-      console.log(err)
-      res.end(renderFullPage("",{}))
+      console.log(err);
+      res.end(renderFullPage('',{}));
     });
 
   });
