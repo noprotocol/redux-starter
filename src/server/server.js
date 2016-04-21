@@ -83,7 +83,7 @@ app.get('/*', function (req, res) {
   match({ routes, location }, (err, redirectLocation, renderProps) => {
 
     if(err) {
-      // console.error(err);
+      console.error(err);
       return res.status(500).end('Internal server error');
     }
 

@@ -32,6 +32,7 @@ The aim of this boilerplate is to stay small yet complete. It contains all the h
   - Redux Logger 2.6.1
 
 - Redbox 1.2.3
+
 - Webpack 1.13.0
 - Axios 0.10.0
 
