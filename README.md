@@ -2,6 +2,8 @@
 
 [![GitHub release](https://img.shields.io/github/release/Hyra/Antler.svg?style=flat-square)](https://github.com/Hyra/Antler/releases) [![Join the chat at https://gitter.im/Hyra/Antler](https://img.shields.io/gitter/room/Hyra/Antler.svg?style=flat-square)](https://gitter.im/Hyra/Antler)
 
+[![Demo on Heroku](https://img.shields.io/badge/demo-heroku-brightgreen.svg?style=flat-square)](https://antler-demo.herokuapp.com)
+
 # What is Antler
 
 Antler is a starterkit or boilerplate app to kickstart your next Front-end project using all the bleeding edge libraries in an easy to understand architecture.
@@ -34,6 +36,7 @@ The aim of this boilerplate is to stay small yet complete. It contains all the h
 - Redbox 1.2.3
 
 - Webpack 1.13.0
+
 - Axios 0.10.0
 
 ## Roadmap
